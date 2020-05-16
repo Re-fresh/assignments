@@ -14,7 +14,7 @@ public class FibonacciLastDigit {
             current = tmp_previous%10 + current%10;
         }
 
-        return current;
+        return current%10;
     }
     
     public static void main(String[] args) {

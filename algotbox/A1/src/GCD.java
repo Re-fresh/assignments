@@ -2,8 +2,7 @@ import java.util.*;
 
 public class GCD {
   private static int gcd(int a, int b) {
-    int current_gcd = 1;
-   while(a!=0 || b!=0 ) {
+   while(a!=0 && b!=0 ) {
 	   if(a>b) {
 		   return gcd(b, a%b);
 	   }
@@ -11,8 +10,9 @@ public class GCD {
 		   return gcd(a, b%a);
    }
     
-
-    return current_gcd;
+   if(a>0) return a;
+   else return b;
+    
   }
 
   public static void main(String args[]) {
